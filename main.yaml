@@ -87,6 +87,7 @@
           # 'rcm',
           'readline',
           # 'redis',
+          'rustup',
           # 'sqlite3',
           'tmux',
           # 'unixodbc',
