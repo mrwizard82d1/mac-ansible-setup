@@ -26,6 +26,9 @@
 
     # Tried to install dotnet-sdk, but could not figure it out. It tries to access GitHub using user name 
     # and password which was deprecated in Aug-2021.
+    # Similarly, tried to install `rust` (the language). Reported that it failed to find rust. 
+    # Encountered similary error trying to install `rustup`. I need to learn something, but I am
+    # unclear what.
 
     - name: Install core packages via brew casks
       community.general.homebrew_cask:
@@ -52,51 +55,51 @@
         # - zoom
         # - tuple
 
-    # - name: "Install homebrew packages"
-    #   community.general.homebrew:
-    #     name: [
-    #       'autoconf',
-    #       'automake',
-    #       'aws-iam-authenticator',
-    #       'awscli',
-    #       'bfg',
-    #       'coreutils',
-    #       'curl',
-    #       'dbt@0.18.0',
-    #       'direnv',
-    #       'dnsmasq',
-    #       'fzf',
-    #       'gnu-time',
-    #       'gpg',
-    #       'heroku',
-    #       'htop',
-    #       'imagemagick@6',
-    #       'kubectx',
-    #       'kubernetes-cli',
-    #       'kubernetes-helm',
-    #       'libtool',
-    #       'libxslt',
-    #       'libyaml',
-    #       'mas',
-    #       'openssl' ,
-    #       'pkg-config',
-    #       'postgresql',
-    #       'rcm',
-    #       'readline',
-    #       'redis',
-    #       'sqlite3',
-    #       'tmux',
-    #       'unixodbc',
-    #       'unzip',
-    #       'vim',
-    #       'watchman',
-    #       'xz',
-    #       'yarn',
-    #       'zlib',
-    #       'zsh',
-    #     ]
-    #     state: present
-    #     update_homebrew: yes
+    - name: "Install homebrew packages"
+      community.general.homebrew:
+        name: [
+          # 'autoconf',
+          # 'automake',
+          # 'aws-iam-authenticator',
+          # 'awscli',
+          # 'bfg',
+          'coreutils',
+          'curl',
+          # 'dbt@0.18.0',
+          # 'direnv',
+          # 'dnsmasq',
+          # 'fzf',
+          # 'gnu-time',
+          'gpg',
+          # 'heroku',
+          # 'htop',
+          # 'imagemagick@6',
+          # 'kubectx',
+          # 'kubernetes-cli',
+          # 'kubernetes-helm',
+          # 'libtool',
+          # 'libxslt',
+          # 'libyaml',
+          # 'mas',
+          'openssl' ,
+          # 'pkg-config',
+          # 'postgresql',
+          # 'rcm',
+          'readline',
+          # 'redis',
+          # 'sqlite3',
+          'tmux',
+          # 'unixodbc',
+          # 'unzip',
+          # 'vim',
+          # 'watchman',
+          # 'xz',
+          'yarn',
+          # 'zlib',
+          'zsh',
+        ]
+        state: present
+        update_homebrew: yes
 
     # - name: "Install from Mac app store"
     #   shell: mas install {{ item }}
