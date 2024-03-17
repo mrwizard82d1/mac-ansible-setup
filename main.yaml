@@ -58,6 +58,7 @@
     - name: "Install homebrew packages"
       community.general.homebrew:
         name: [
+          'asdf',
           # 'autoconf',
           # 'automake',
           # 'aws-iam-authenticator',
