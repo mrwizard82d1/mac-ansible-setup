@@ -260,5 +260,13 @@
         
     # - name: re-generate bins now we've installed some yarn packages
     #   shell: asdf reshim nodejs
-        
 
+    - name: Clone doom-emacs if ~/.config/emacs **does not** exist
+      shell: git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+      args: 
+        creates: ~/.config/emacs
+
+    - name: Install doom-emacs if ~/.config/doom **does not** exist
+      shell: ~/.config/emacs/bin/doom install
+      args: 
+        creates: ~/.config/doom
