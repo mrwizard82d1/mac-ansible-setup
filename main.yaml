@@ -13,16 +13,19 @@
       become: true
       become_user: root
 
-    # - name: 'add custom homebrew repos'
-    #   community.general.homebrew_tap:
-    #     name: [
-    #       adoptopenjdk/openjdk,
-    #       fishtown-analytics/dbt,
-    #       heroku/brew,
-    #       homebrew/cask-versions,
-    #       thoughtbot/formulae,
-    #       weaveworks/tap,
-    #     ]
+    - name: 'add custom homebrew repos'
+      community.general.homebrew_tap:
+        name: [
+          # adoptopenjdk/openjdk,
+          # Installing `d12frosted/emacs-plus` appears to succeed; however, I cannot later install
+          # `emacs-plus@29` from the casks.
+          # d12frosted/emacs-plus,
+          # fishtown-analytics/dbt,
+          # heroku/brew,
+          # homebrew/cask-versions,
+          # thoughtbot/formulae,
+          # weaveworks/tap,
+        ]
 
     # Tried to install dotnet-sdk, but could not figure it out. It tries to access GitHub using user name 
     # and password which was deprecated in Aug-2021.
@@ -31,6 +34,7 @@
     # unclear what.
     # Similar error installing jetbrains toolbox. Installed using command: 
     # `brew install --cask jetbrains-toolbox`
+    # Failed to install `emacs-plus@29` evan after seemingly installing the cask.
 
     - name: Install core packages via brew casks
       community.general.homebrew_cask:
@@ -42,7 +46,9 @@
         # - android-studio
         # - datagrip
         # - docker
-        # - dropbox
+        # - dropbox"
+        # Appears that emacs 29 is the last version supported by Doom-Emacs
+        # - emacs-plus@29
         # - figma
         # - google-chrome
         # - google-cloud-sdk
