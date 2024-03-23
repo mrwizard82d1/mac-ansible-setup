@@ -27,8 +27,10 @@
     # Tried to install dotnet-sdk, but could not figure it out. It tries to access GitHub using user name 
     # and password which was deprecated in Aug-2021.
     # Similarly, tried to install `rust` (the language). Reported that it failed to find rust. 
-    # Encountered similary error trying to install `rustup`. I need to learn something, but I am
+    # Encountered similar error trying to install `rustup`. I need to learn something, but I am
     # unclear what.
+    # Similar error installing jetbrains toolbox. Installed using command: 
+    # `brew install --cask jetbrains-toolbox`
 
     - name: Install core packages via brew casks
       community.general.homebrew_cask:
@@ -45,6 +47,7 @@
         # - google-chrome
         # - google-cloud-sdk
         # - iterm2
+        - jetbrains-toolbox
         # - kindle
         # - ngrok
         # - slack
