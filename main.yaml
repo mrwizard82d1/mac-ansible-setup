@@ -68,6 +68,8 @@
       community.general.homebrew:
         name: [
           'asdf',
+          'fd',
+          'findutils',
           # 'autoconf',
           # 'automake',
           # 'aws-iam-authenticator',
