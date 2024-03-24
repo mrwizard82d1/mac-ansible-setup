@@ -46,7 +46,7 @@
         # - android-studio
         # - datagrip
         # - docker
-        # - dropbox"
+        # - dropbox
         # Appears that emacs 29 is the last version supported by Doom-Emacs
         # - emacs-plus@29
         # - figma
